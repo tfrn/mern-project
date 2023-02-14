@@ -3,9 +3,9 @@ const mongoose = require("mongoose");
 mongoose.set('strictQuery', false);
 // dotenv 
 dotenv.config();
-const database = () =>{
+const database = async() =>{
     try {
-        mongoose.connect(process.env.MONGO_URI, {
+        await mongoose.connect(process.env.MONGO_URI, {
             useNewUrlParser: true,
             useUnifiedTopology: true
         }).then(()=>{
