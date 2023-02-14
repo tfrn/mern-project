@@ -5,7 +5,7 @@ const dotenv = require("dotenv");
 const database = require("./config/database");
 const authRouter = require("./routes/auth"); 
 const postRouter = require("./routes/post"); 
-
+const path = require('path');
 // dotenv 
 dotenv.config();
 
