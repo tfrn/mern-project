@@ -13,6 +13,7 @@ function App() {
   const {modal} = useSelector(state => state.modal);
   return (
     <div>
+      <div className='text-black font-bold text-2xl cursor-pointer'>hello world!</div>
      <BrowserRouter>
      {token?.token && <Navbar></Navbar>}
      {modal && <Modal />}
@@ -20,6 +21,7 @@ function App() {
         <Route path="/" element={!token?.token ? <Link to={'/auth'}/> : <Home />}/>
         <Route path="/auth" element={<Auth />}/>
       </Routes>
+      <Link to={'/auth'}>auth</Link>
      </BrowserRouter>
      <ToastContainer></ToastContainer>
     </div>
